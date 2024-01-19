@@ -994,6 +994,12 @@ export type ApiMethods<F> = {
     chat_id: number | string;
   }): ChatFromGetChat;
 
+  /** Use this method to get a list of members in a chat. Returns an Array of ChatMember objects. */
+  getChatMembers(args: {
+    /** Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername) */
+    chat_id: number | string;
+  }): Array<ChatMember>;
+
   /** Use this method to get a list of administrators in a chat, which aren't bots. Returns an Array of ChatMember objects. */
   getChatAdministrators(args: {
     /** Unique identifier for the target chat or username of the target supergroup or channel (in the format `@channelusername`) */
